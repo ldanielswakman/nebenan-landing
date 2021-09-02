@@ -21,10 +21,15 @@
     <meta name="twitter:image" content="/images/meta-image.jpg">
 
     <!-- Assets -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet"
+        type="text/css" />
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
-    <link id="favicon" rel="shortcut icon" href="/images/app-icon.png">
+    <!-- <link id="favicon" rel="shortcut icon" href="/images/app-icon.png"> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/scripts.js"></script>
 
     <!-- Meta parameters -->
     <meta charset="utf-8" />
@@ -60,18 +65,105 @@
                 <button class="button button--primary">
                     Komm rein
                 </button>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </header>
 
-    <section class="section--cover">
+    <section class="section section--cover">
         <div class="container">
 
-            <h1>Wilkommen in<br/> deiner Nachbarschaft.</h1>
+            <div class="content">
+
+                <h1>Wilkommen in<br /> deiner Nachbarschaft.</h1>
+
+            </div>
 
             <figure class="cover-image">
-                <img src="images/cover-image.png" alt="" />
+                <div class="owl-carousel">
+                    <div>
+                        <img src="images/cover-image-1.jpg" alt="" />
+                        <a class="figcaption" href=""><strong>Aktionsmonat Umweltschutz</strong> September 2021</a> 
+                    </div>
+                    <div>
+                        <img src="images/cover-image-2.jpg" alt="" />
+                        <a class="figcaption" href=""><strong>Aktionsmonat Umweltschutz</strong> September 2021</a> 
+                    </div>
+                    <div>
+                        <img src="images/cover-image-3.jpg" alt="" />
+                        <a class="figcaption" href=""><strong>Aktionsmonat Umweltschutz</strong> September 2021</a> 
+                    </div>
+                </div>
             </figure>
+        </div>
+    </section>
+
+    <section class="section section--neighbour">
+        <div class="container">
+
+            <div class="column column--white">
+                <div class="content content--sticky">
+                    <h2>Hier bist du in der Nachbarschaft zu Hause</h2>
+
+                    <p>Quillt dein Dachboden über? Bricht es dir das Herz, wenn dein Fahrrad im Keller verstaubt? Oder
+                        das Kinderbett zu klein ist und einer anderen Familie noch dienen könnte? Dann ist der
+                        Marktplatz genau deine Rubrik. Hier wird getauscht, verschenkt, verkauft und gesucht.</p>
+
+                    <div class="stats">
+                        <dl>
+                            <dd>1.7M</dd>
+                            <dt>Verifizierte<br />Nachbarn</dt>
+                        </dl>
+
+                        <dl>
+                            <dd>6000+</dd>
+                            <dt>Nachbarschaften</dt>
+                        </dl>
+                    </div>
+
+                    <button class="button button--primary">
+                        Ich bin auch dabei!
+                    </button>
+                </div>
+            </div>
+
+            <div class="column">
+
+                <div style="min-height: 200vh">
+                    <figure style="width: 75%; margin-left: -2rem;"><img src="images/spotlight-1.png" alt="" /></figure>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section section--cta">
+        <div class="container">
+
+            <h2>Mach mit und belebe deine Nachbarschaft!</h2>
+
+            <form>
+                <div class="input">
+                    <input id="cta_firstname" type="text" />
+                    <label for="cta_firstname">Vorname</label>
+                </div>
+                <div class="input">
+                    <input id="cta_lastname" type="text" />
+                    <label for="cta_lastname">Nachname</label>
+                </div>
+                <div class="input">
+                    <input id="cta_plz" type="text" />
+                    <label for="cta_plz">PLZ</label>
+                </div>
+                <button class="button button--primary">
+                    Jetzt Registrieren
+                </button>
+            </form>
+
         </div>
     </section>
 
