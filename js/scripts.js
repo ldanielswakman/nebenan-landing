@@ -25,7 +25,7 @@ $(document).ready(function () {
         loop: true,
         margin: 10,
         autoplay: true,
-        autoplayTimeout: 5000,
+        autoplayTimeout: 8000,
         // autoplayHoverPause: true,
         onInitialize: resetProgressBar,
         onInitialized: startProgressBar,
