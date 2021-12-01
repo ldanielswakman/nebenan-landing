@@ -320,6 +320,7 @@ figure.cover-image .figcaption {
 }
 figure.cover-image .figcaption:hover {
     background: #b2ca06;
+    background: rgba(24, 53, 56, 1);
 }
 figure.cover-image .figcaption strong {
     margin-right: 0.5rem;
