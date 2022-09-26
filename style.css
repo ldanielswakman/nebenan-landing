@@ -1,3 +1,23 @@
+@font-face {
+    font-family: 'Byrd';
+    src: url('fonts/Byrd-Black.woff2') format('woff2'),
+        url('fonts/Byrd-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Byrd';
+    src: url('fonts/Byrd-Bold.woff2') format('woff2'),
+        url('fonts/Byrd-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 :root {
     --bg-color: #f8f9f9;
     --text-color: #393939;
@@ -14,7 +34,8 @@ body {
     padding: 0;
     background: var(--bg-color);
     color: var(--text-color);
-    font-family: "Open Sans", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
+    font-feature-settings: "salt";
 
     font-size: 100%;
 
@@ -24,12 +45,12 @@ body {
 }
 
 ::selection {
-    background-color: #004850;
-    color: #fff;
+    background-color: #201649;
+    color: #FF9DE2;
 }
 -moz-::selection {
-    background-color: #004850;
-    color: #fff;
+    background-color: #201649;
+    color: #FF9DE2;
 }
 
 /* General properties */
@@ -37,31 +58,33 @@ body {
 h1 {
     margin: 0;
     margin-bottom: 1.25rem;
-    font-family: "Open Sans Condensed", Arial, sans-serif;
-    font-size: 3rem;
+    font-family: "Byrd", Arial, sans-serif;
+    font-size: 2rem;
     line-height: 110%;
+    font-weight: 900;
+    text-transform: uppercase;
 }
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
     h1 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
-} */
-@media (min-width: 1024px) {
+}
+@media (min-width: 1280px) {
     h1 {
-        font-size: 5rem;
+        font-size: 3.5rem;
     }
 }
 h2 {
     margin: 0;
     margin-bottom: 1.25rem;
-    font-family: "Open Sans Condensed", Arial, sans-serif;
+    font-family: "Byrd", Arial, sans-serif;
     font-size: 2.5rem;
     line-height: 110%;
 }
 h3 {
     margin: 0;
     margin-bottom: 1.125rem;
-    font-family: "Open Sans Condensed", Arial, sans-serif;
+    font-family: "Byrd", Arial, sans-serif;
     font-size: 2rem;
     line-height: 110%;
 }
@@ -82,7 +105,7 @@ figure img {
 /* Container */
 
 .container {
-    max-width: 75rem;
+    max-width: 65rem;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -90,7 +113,7 @@ figure img {
 /* Audience bar */
 .audience-bar {
     margin-bottom: 5rem;
-    background: #f8f9f9;
+    background: #fff;
     overflow-x: auto;
 }
 .audience-bar ul {
@@ -108,7 +131,6 @@ figure img {
 @media (min-width: 768px) {
     .audience-bar ul {
         justify-content: center;
-        gap: 2rem;
     }
     .audience-bar li:last-child {
         padding-right: 0;
@@ -116,20 +138,18 @@ figure img {
 }
 .audience-bar a {
     display: block;
-    padding: 1rem;
-    text-transform: uppercase;
+    padding: 0.75rem 2rem;
+    font-size: 0.875rem;
     font-weight: 600;
-    letter-spacing: 1px;
-    color: #799189;
+    color: #201649;
     opacity: 0.75;
     white-space: nowrap;
+    opacity: 0.5;
 }
 .audience-bar a:hover {
-    opacity: 1;
+    opacity: 0.8;
 }
 .audience-bar a.active {
-    color: #004850;
-    color: #b2ca06;
     font-weight: bold;
     opacity: 1;
 }
@@ -149,8 +169,8 @@ header {
     left: 0;
     z-index: 3;
     width: 100vw;
-    background: #fff;
     padding: 1rem 0;
+    background: #DAEF62;
 }
 header.is-sticky {
     box-shadow: 0px 8px 20px rgba(24, 53, 56, 0.04), 0px 4px 12px rgba(24, 53, 56, 0.08);
@@ -207,7 +227,7 @@ header .right {
     display: block;
     width: 1.75rem;
     height: 2px;
-    background: #799189;
+    background: #201649;
     border-radius: 1px;
 }
 .menu-toggle span:first-child {
@@ -224,11 +244,14 @@ header .right {
 
 .section--cover {
     padding: 3rem 0;
-    background: #b2ca06;
+    background: #DAEF62;
 }
 @media (min-width: 768px) {
     .section--cover {
         padding: 8rem 0;
+    }
+    .section--cover .container {
+        display: flex;
     }
 }
 
@@ -236,7 +259,7 @@ header .right {
     position: relative;
     z-index: 2;
     max-width: 45rem;
-    color: #fff;
+    color: #201649;
 }
 
 .section--cover .card--postalcode {
@@ -271,26 +294,13 @@ figure.cover-image {
     margin: 0;
     margin-bottom: -5rem;
 }
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     figure.cover-image {
         margin-top: -22rem;
         margin-left: 15rem;
         margin-bottom: -12rem;
     }
-}
-figure.cover-image:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 80%;
-    height: 80%;
-    margin-left: -9rem;
-    margin-top: -3rem;
-    background: rgba(0, 0, 0, 0.1);
-    background: #a0b605;
-    border-radius: 1.25rem;
-}
+} */
 figure.cover-image:after {
     content: "";
     position: absolute;
@@ -304,23 +314,6 @@ figure.cover-image:after {
 figure.cover-image img {
     position: relative;
     max-width: 100%;
-    border-radius: 1.25rem;
-}
-figure.cover-image .figcaption {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    max-width: calc(100% - 2rem);
-    padding: 0.5rem 1.25rem;
-    background: rgba(24, 53, 56, 0.6);
-    border-radius: 1rem;
-    backdrop-filter: blur(4px);
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.875rem;
-}
-figure.cover-image .figcaption:hover {
-    background: #b2ca06;
-    background: rgba(24, 53, 56, 1);
 }
 figure.cover-image .figcaption strong {
     margin-right: 0.5rem;
@@ -579,11 +572,10 @@ form .input input:focus + label {
     border: none;
     font: inherit;
     line-height: 1rem;
-    background: #0090a1;
-    /* box-shadow: 0px 2px 8px rgba(24, 53, 56, 0.12); */
-    border-radius: 12px;
+    background: #FF9DE2;
+    border-radius: 1.5rem;
     font-weight: bold;
-    color: #fff;
+    color: #201649;
     cursor: pointer;
 }
 @media (min-width: 768px) {
@@ -593,7 +585,17 @@ form .input input:focus + label {
 }
 .button:hover {
     box-shadow: 0px 2px 12px rgba(24, 53, 56, 0.24);
-    background: #007381;
+    background: #EC7BCB;
+}
+.button.button--outline {
+    padding: 0.75rem 2rem;
+    background: transparent;
+    color: #201649;
+    border: 1px solid #201649;
+}
+.button.button--outline:hover {
+    box-shadow: none;
+    background: rgba(24, 53, 56, 0.05);
 }
 .button.button--transparent {
     background: transparent;
