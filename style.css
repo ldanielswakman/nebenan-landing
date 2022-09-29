@@ -16,6 +16,31 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("fonts/Inter-Regular.woff2?v=3.19") format("woff2"),
+         url("fonts/Inter-Regular.woff?v=3.19") format("woff");
+}
+@font-face {
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("fonts/Inter-SemiBold.woff2?v=3.19") format("woff2"),
+         url("fonts/Inter-SemiBold.woff?v=3.19") format("woff");
+}
+@font-face {
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("fonts/Inter-Bold.woff2?v=3.19") format("woff2"),
+         url("fonts/Inter-Bold.woff?v=3.19") format("woff");
+}
+
 
 
 :root {
@@ -171,9 +196,13 @@ header {
     width: 100vw;
     padding: 1rem 0;
     background: #DAEF62;
+    transition: background 0.2s linear;
 }
 header.is-sticky {
     box-shadow: 0px 8px 20px rgba(24, 53, 56, 0.04), 0px 4px 12px rgba(24, 53, 56, 0.08);
+}
+header.isWhite {
+    background: white;
 }
 header .container {
     display: flex;
